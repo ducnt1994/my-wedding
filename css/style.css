@@ -29,6 +29,10 @@ URL:            http://themeforest.net/user/themexriver
 	Fonts
 ----------------------------*/
 @import url("https://fonts.googleapis.com/css?family=Dosis:400,600,700|Great+Vibes");
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Regular.ttf");
+}
 
 /*--------------------------------------------------------------
 #0.1    Theme Reset Style
