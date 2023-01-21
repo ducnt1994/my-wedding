@@ -547,12 +547,11 @@
 
             messages: {
                 name: "Please enter your name",
-                email: "Please enter your email",
-                guest: "Select your number of guest",
-                events: "Select your event list"
             },
 
             submitHandler: function (form) {
+                alert("Cảm ơn đã gửi những lời vàng ngọc đến vợ chồng chúng mình nhéee!!!")
+                return ;
                 $("#loader").css("display", "inline-block");
                 $.ajax({
                     type: "POST",
