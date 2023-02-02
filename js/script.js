@@ -550,14 +550,16 @@
             },
 
             submitHandler: function (form) {
-                alert("Cảm ơn đã gửi những lời vàng ngọc đến vợ chồng chúng mình nhéee!!!")
-                return ;
+                // alert("Cảm ơn đã gửi những lời vàng ngọc đến vợ chồng chúng mình nhéee!!!")
+                // return ;
+                console.log($(form).serialize())
                 $("#loader").css("display", "inline-block");
                 $.ajax({
-                    type: "POST",
-                    url: "mail.php",
+                    type: "GET",
+                    url: "https://script.google.com/macros/s/AKfycbxYiLkrN9Fsf27fQpGO5KTXcpxWc5f7PnKC3qqL2SsiAuFo-S1LG3DNMQ5hXtoOkMqb/exec",
                     data: $(form).serialize(),
-                    success: function () {
+                    success: function (res) {
+                        console.log(res)
                         $( "#loader").hide();
                         $( "#success").slideDown( "slow" );
                         setTimeout(function() {
@@ -565,7 +567,8 @@
                         }, 3000);
                         form.reset();
                     },
-                    error: function() {
+                    error: function(e) {
+                        console.log(e)
                         $( "#loader").hide();
                         $( "#error").slideDown( "slow" );
                         setTimeout(function() {
