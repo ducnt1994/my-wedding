@@ -553,6 +553,7 @@
                 console.log($(form).serialize())
                 $("#loader").css("display", "inline-block");
                 $.ajax({
+                    crossDomain: true,
                     type: "GET",
                     url: "https://script.google.com/macros/s/AKfycbxYiLkrN9Fsf27fQpGO5KTXcpxWc5f7PnKC3qqL2SsiAuFo-S1LG3DNMQ5hXtoOkMqb/exec",
                     data: $(form).serialize(),
