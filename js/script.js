@@ -550,8 +550,6 @@
             },
 
             submitHandler: function (form) {
-                // alert("Cảm ơn đã gửi những lời vàng ngọc đến vợ chồng chúng mình nhéee!!!")
-                // return ;
                 console.log($(form).serialize())
                 $("#loader").css("display", "inline-block");
                 $.ajax({
