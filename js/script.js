@@ -550,15 +550,14 @@
             },
 
             submitHandler: function (form) {
-                console.log($(form).serialize())
                 $("#loader").css("display", "inline-block");
                 $.ajax({
                     crossDomain: true,
                     type: "GET",
-                    url: "https://script.google.com/macros/s/AKfycbxYiLkrN9Fsf27fQpGO5KTXcpxWc5f7PnKC3qqL2SsiAuFo-S1LG3DNMQ5hXtoOkMqb/exec",
+                    url: "https://script.google.com/macros/s/AKfycbztsbzg8i04KnF4ngEDln2fE49Y73jTyQFiyRyFDa6Bo2WzCdgjIcvATsIOPhuzXGI3/exec",
                     data: $(form).serialize(),
                     success: function (res) {
-                        console.log(res)
+                        alert("Cảm ơn đã gửi những lời vàng ngọc đến vợ chồng chúng mình nhéee!!!")
                         $( "#loader").hide();
                         $( "#success").slideDown( "slow" );
                         setTimeout(function() {
